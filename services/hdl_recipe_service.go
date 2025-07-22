@@ -841,8 +841,8 @@ func (*HdlRecipeService) SplitSendMqtt(data *SendConfig, token string, intervalT
 		time.Sleep(time.Second * time.Duration(intervalTime))
 	}
 	//食谱配置,每10个食谱下发一次
-	for i := 0; i < len(data.Recipe); i += 5 {
-		end := i + 5
+	for i := 0; i < len(data.Recipe); i += 4 {
+		end := i + 4
 		if end > len(data.Recipe) {
 			end = len(data.Recipe)
 		}
